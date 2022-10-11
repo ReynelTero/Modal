@@ -1,0 +1,149 @@
+:root {
+    --animation-1: mymove 5s infinite;
+    --backgrnd-img: url("background.jpg");
+    --font-1: 'Hammersmith One', sans-serif;
+
+    --clr-white: white;
+    --clr-red: rgb(211, 39, 39);
+    --clr-darkgreen: rgb(19, 100, 100);
+    --clr-lightgreen: rgb(25, 160, 160);
+    --clr-background: rgb(240, 236, 236);
+}
+
+/*Similar styles*/
+#background,
+.blurd-background {
+    background-image: var(--backgrnd-img);
+}
+
+.container,
+.close-container,
+.modal-container,
+.close-modal-container {
+    background-color: var(--clr-background);
+}
+
+.contents,
+.container,
+#background,
+.close-container,
+.modal-container,
+.blurd-background,
+.close-modal-container {
+    display: flex;
+    justify-content: center;
+}
+/*Similar styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    background-size: cover;
+}
+
+#background {
+    height: 100vh;
+    align-items: center;
+}
+
+/* ZOOM-BLURD BACKGROUND */
+.blurd-background {
+    height: 100vh;
+    align-items: center;
+    background-size: 165% 165%;
+    backdrop-filter: blur(5px);
+}
+/* ZOOM-BLURD BACKGROUND */
+
+.container {
+    z-index: 10;
+    width: 30rem;
+    height: 17rem;
+    border-radius: 20px;
+    align-items: center;
+}
+
+/* CLOSE CONTAINER */
+.close-container {
+    width: 30rem;
+    height: 17rem;
+    align-items: center;
+    border-radius: 20px;
+}
+/* CLOSE CONTAINER */
+
+.container-center {
+    text-align: center;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: lighter;
+    padding-bottom: 3rem;
+    font-family: var(--font-1);
+    color: var(--clr-darkgreen);
+}
+
+.button {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    color: var(--clr-white);
+    border-color: transparent;
+    animation: var(--animation-1);
+    background-color: var(--clr-lightgreen);
+}
+
+@keyframes mymove {
+    from {background-color: var(--clr-lightgreen); color: var(--clr-white);}
+    to {background-color: var(--clr-background); color: var(--clr-lightgreen); border-color: var(--clr-lightgreen);}
+}
+
+/* MODAL CONTENTS LAYER */
+.modal-container {
+    width: 30rem;
+    height: 17rem;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: -30rem;
+}
+
+/* CLOSE MODAL CONTAINER */
+.close-modal-container {
+    z-index: -10;
+    width: 30rem;
+    height: 17rem;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: -30rem;
+}
+/* CLOSE MODAL CONTAINER */
+
+.close-btn {
+    font-size: 30px;
+    margin-right: -27rem;
+    color: var(--clr-red);
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.close-btn:hover {
+    transform: scale(1.3);
+}
+
+.contents {
+    width: 30rem;
+    height: 13.5rem;
+    text-align: center;
+}
+/* MODAL CONTENTS LAYER */
+
+
+
+
